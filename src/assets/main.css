@@ -1,0 +1,115 @@
+/* @import './base.css'; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.no-scrollbar::-webkit-scrollbar{
+  display: none;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.fadeIn {
+  animation: fadeIn-animation .6s;
+}
+
+@keyframes fadeIn-animation {
+  from {
+    visibility: visible;
+    opacity: 0;
+  }
+
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.fadeOut {
+  animation: fadeOut-animation .6s;
+}
+
+@keyframes fadeOut-animation {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.s{
+  transform: translateX(100%);
+}
+
+.swipeIn{
+  animation: swipeIn-animation .6s;
+}
+@keyframes swipeIn-animation {
+  from {
+    transform: translateX(100%);
+    visibility: visible;
+  }
+  to {
+    transform: translateX(0%);
+    visibility: visible;
+  }
+}
+
+.swipeOut{
+  animation: swipeOut-animation .6s;
+  transform: translateX(100%);
+}
+@keyframes swipeOut-animation {
+  from {
+    transform: translateX(0%);
+    visibility: visible;
+  }
+  to {
+    transform: translateX(100%);
+    visibility: hidden;
+  }
+}
+
+
+/* 
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+} */
